@@ -11,9 +11,11 @@ function convertToRoman(num) {
 
  let roman='';
 	for (let i in obj){
-		if (num>=i){
-			num=num-obj[i];
-			roman=`$(roman)+$(i)`;
+		let[sym, value]=i;
+		while (value<=num) {
+			roman=roman+sym;
+			num=num-value;
+		} 
 		}
 		
 	}
