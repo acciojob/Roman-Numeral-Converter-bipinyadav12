@@ -17,11 +17,11 @@ function convertToRoman(num) {
 
  let roman='';
 	for (let i in obj){
-		let [sym, value] = i;
-		while (value<=num) 
+		let objnew= i;
+		while (objnew.value<=num) 
 		{
-			roman=roman+sym;
-			num=num-value;
+			roman=roman+objnew.key;
+			num=num-objnew.value;
 		} 
 		}
 		
