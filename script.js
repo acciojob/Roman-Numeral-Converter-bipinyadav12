@@ -28,8 +28,8 @@ function convertToRoman(num) {
 	}
 	return roman;
 }
-//const number=prompt("enter the number");
- //alert(convertToRoman(number));
+const number=prompt("enter the number");
+ alert(convertToRoman(number));
 
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
 
