@@ -1,32 +1,33 @@
 function convertToRoman(num) {
-  	const obj = {
-      ['M',1000],
-	  ['CM',900],
-      ['D', 500],
-	  ['CD',400],
-      ['C', 100],
-	  ['XC',90],
-      ['L', 50], 
-	  ['XL',40],
-      ['X', 10],
-	  ['IX',9],
-      ['V', 5], 
-	  ['IV',4],
-      ['I', 1]
+    // Mapping of Roman numerals to their corresponding values
+    const romanNumerals = {
+        1000: 'M',
+        900: 'CM',
+        500: 'D',
+        400: 'CD',
+        100: 'C',
+        90: 'XC',
+        50: 'L',
+        40: 'XL',
+        10: 'X',
+        9: 'IX',
+        5: 'V',
+        4: 'IV',
+        1: 'I'
     };
 
- let roman='';
-	for (let i in obj){
-		let objnew= i;
-		while (objnew.value<=num) 
-		{
-			roman=roman+objnew.key;
-			num=num-objnew.value;
-		} 
-		}
-		
-	}
-	return roman;
+    let result = '';
+
+    // Loop through the mapping and build the Roman numeral string
+    for (let value in romanNumerals) {
+        while (num >= value) {
+            result += romanNumerals[value];
+            num -= value;
+        }
+    }
+
+    return result;
+
 }
 const number=prompt("enter the number");
  alert(convertToRoman(number));
