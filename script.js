@@ -30,5 +30,5 @@ let result='';
 const number=prompt("enter the number");
  alert(convertToRoman(number));
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
-
+console.log(convertToRoman(36));
 module.exports = convertToRoman
